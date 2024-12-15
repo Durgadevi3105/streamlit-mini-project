@@ -93,10 +93,8 @@ my_own_queries= {
         "Find the product with the highest total quantity sold":
          'SELECT product_id, SUM(quantity) AS total_quantity_sold FROM df GROUP BY product_id ORDER BY total_quantity_sold DESC LIMIT 1;',
 
-         "Find the month with the highest revenue":
-         'SELECT  TO_CHAR(order_date,'YYYY-MM') AS month, SUM(quantity * sale_price) AS total_revenue FROM  df GROUP BY TO_CHAR(order_date, 'YYYY-MM') ORDER BY  total_revenue DESC LIMIT 1;',
-
-
+         "Total orders per segment": 
+        'SELECT COUNT(DISTINCT "order id") AS total_orders FROM df1_order;',
 
         "Find the state with the highest number of orders":
         'SELECT state, COUNT(*) AS order_count  FROM df GROUP BY state ORDER BY order_count DESC LIMIT 1;',
@@ -283,16 +281,10 @@ if query:
             plt.xticks(rotation=45)
             st.pyplot(plt)
 
-        elif query == "highest_revenue_month":
-              result_df = run_query(my_own_queries[query])
+       elif query == "Total orders per segment":
+        result_df = run_query(my_own_queries[query])
         if result_df is not None:
-            plt.figure(figsize=(10, 6))
-            plt.bar(result_df["month"], result_df["toatl_revenue"], color='brown')
-            plt.title("highest_revenue_month")
-            plt.xlabel("month")
-            plt.ylabel("total_revenue")
-            plt.xticks(rotation=45)
-            st.pyplot(plt)
+            st.write(f"Total Orders: {result_df['total_orders'][0]}")
 
         elif query == "state_with_highest_orders":
               result_df = run_query(my_own_queries[query])
