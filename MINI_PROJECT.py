@@ -108,7 +108,7 @@ my_own_queries= {
 
         "Calculate the percentage contribution of each region to total revenue":
         'SELECT region, SUM(quantity * sale_price) AS total_revenue FROM df GROUP BY region;',
-        'SELECT SUM(quantity * sale_price) AS total_revenue FROM df;',
+        
  }
 
 
