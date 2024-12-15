@@ -65,8 +65,10 @@ queries_by_guvi={
         'SELECT category, SUM(sale_price - cost_price) AS total_profit FROM df GROUP BY category ORDER BY total_profit DESC LIMIT 1;',
 
         "Calculate the total revenue generated per year":
-        'SELECT DATE_PART ('year', "order_date") AS "year", SUM("sale_price" * "quantity") AS total_revenue FROM df GROUP BY  DATE_PART ('year', "order_date") ORDER BY year ;',
+         'SELECT "year", SUM("sales price" * "quantity") AS total_revenue FROM df1_orders GROUP BY "year" ORDER BY "year";',
 }
+
+
 
 my_own_queries= {
 
