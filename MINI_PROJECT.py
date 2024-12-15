@@ -65,7 +65,7 @@ queries_by_guvi={
         'SELECT category, SUM(sale_price - cost_price) AS total_profit FROM df GROUP BY category ORDER BY total_profit DESC LIMIT 1;',
 
         "Calculate the total revenue generated per year":
-         'SELECT "year", SUM("sales price" * "quantity") AS total_revenue FROM df GROUP BY "year" ORDER BY "year";',
+         'SELECT "year", SUM("sale_price" * "quantity") AS total_revenue FROM df GROUP BY "year" ORDER BY "year";',
 }
 
 
@@ -137,10 +137,10 @@ if query:
              result_df = run_query(queries_by_guvi[query])
         if result_df is not None:
             plt.figure(figsize=(10, 6))
-            plt.bar(result_df["product id"], result_df["total_revenue"], color='skyblue')
+            plt.bar(result_df["product_id"], result_df["total_revenue"], color='skyblue')
             plt.title("Top 10 Highest Revenue Generating Products")
-            plt.xlabel("Product ID")
-            plt.ylabel("Total Revenue")
+            plt.xlabel("product_iD")
+            plt.ylabel("Total_Revenue")
             plt.xticks(rotation=45)
             st.pyplot(plt)
 
