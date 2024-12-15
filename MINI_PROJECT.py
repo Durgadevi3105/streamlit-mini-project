@@ -281,8 +281,8 @@ if query:
             plt.xticks(rotation=45)
             st.pyplot(plt)
 
-       elif query == "Total orders per segment":
-        result_df = run_query(my_own_queries[query])
+        elif query == "Total orders per segment":
+            result_df = run_query(my_own_queries[query])
         if result_df is not None:
             st.write(f"Total Orders: {result_df['total_orders'][0]}")
 
@@ -310,7 +310,7 @@ if query:
 
 
         elif query == "percentage contribution":
-              result_df = run_query(my_own_queries[query])
+             result_df = run_query(my_own_queries[query])
         if result_df is not None:
             plt.xlabel("total_renvenue")
             plt.figure(figsize=(10, 6))
