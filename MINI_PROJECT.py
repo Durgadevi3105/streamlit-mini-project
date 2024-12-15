@@ -94,7 +94,7 @@ my_own_queries= {
          'SELECT product_id, SUM(quantity) AS total_quantity_sold FROM df GROUP BY product_id ORDER BY total_quantity_sold DESC LIMIT 1;',
 
          "Total orders per segment": 
-        'SELECT COUNT(DISTINCT "order id") AS total_orders FROM df;',
+        'SELECT COUNT(DISTINCT "order_id") AS total_orders FROM df;',
 
         "Find the state with the highest number of orders":
         'SELECT state, COUNT(*) AS order_count  FROM df GROUP BY state ORDER BY order_count DESC LIMIT 1;',
