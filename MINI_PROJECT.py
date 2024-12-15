@@ -137,10 +137,10 @@ if query:
              result_df = run_query(queries_by_guvi[query])
         if result_df is not None:
             plt.figure(figsize=(10, 6))
-            plt.bar(result_df["product_id"], result_df["total_revenue"], color='skyblue')
+            plt.bar(result_df["product_id"], result_df["revenue"], color='skyblue')
             plt.title("Top 10 Highest Revenue Generating Products")
             plt.xlabel("Product ID")
-            plt.ylabel("Total Revenue")
+            plt.ylabel("Revenue")
             plt.xticks(rotation=45)
             st.pyplot(plt)
 
