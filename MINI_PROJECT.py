@@ -36,7 +36,7 @@ queries_by_guvi={
         'SELECT product_id,SUM(quantity * sale_price) AS revenue FROM df GROUP BY product_id ORDER BY revenue DESC LIMIT 10;',
 
         " Find the top 5 cities with the highest profit margins":
-        'SELECT o."city", SUM(d."profit") AS Total_Profit FROM df o JOIN  df1_orders d ON  o."sub category" = d."sub category" GROUP BY  o."city" ORDER BY Total_Profit DESC LIMIT 5;',
+        'SELECT o."city", SUM(d."profit") AS Total_Profit FROM df o JOIN  df1_orders d ON  o."sub_category" = d."sub_category" GROUP BY  o."city" ORDER BY Total_Profit DESC LIMIT 5;',
 
 
         "Calculate the total discount given for each category":
