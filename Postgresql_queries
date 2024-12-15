@@ -30,6 +30,7 @@ SELECT region, AVG(discount_percent) AS average_discount_percent FROM df GROUP B
 
 ----Query10:Calculate the total revenue generated per year
  select "year",sum("sales price" * "quantity") as "total revenue" from df1_orders group by "year" order by "year";
+
 -----Query11:Products with No Profit
 select "product_id" from df group by "product_id" having sum("profit")=0;
 
