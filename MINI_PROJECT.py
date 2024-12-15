@@ -65,7 +65,7 @@ queries_by_guvi={
         'SELECT category, SUM(sale_price - cost_price) AS total_profit FROM df GROUP BY category ORDER BY total_profit DESC LIMIT 1;',
 
         "Calculate the total revenue generated per year":
-         'SELECT "year", SUM("sales price" * "quantity") AS total_revenue FROM df1_orders GROUP BY "year" ORDER BY "year";',
+         'SELECT "year", SUM("sales price" * "quantity") AS total_revenue FROM df GROUP BY "year" ORDER BY "year";',
 }
 
 
@@ -94,7 +94,7 @@ my_own_queries= {
          'SELECT product_id, SUM(quantity) AS total_quantity_sold FROM df GROUP BY product_id ORDER BY total_quantity_sold DESC LIMIT 1;',
 
          "Total orders per segment": 
-        'SELECT COUNT(DISTINCT "order id") AS total_orders FROM df1_order;',
+        'SELECT COUNT(DISTINCT "order id") AS total_orders FROM df;',
 
         "Find the state with the highest number of orders":
         'SELECT state, COUNT(*) AS order_count  FROM df GROUP BY state ORDER BY order_count DESC LIMIT 1;',
