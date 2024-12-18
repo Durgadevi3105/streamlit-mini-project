@@ -139,7 +139,7 @@ if query:
             plt.figure(figsize=(10, 6))
             plt.bar(result_df["product_id"], result_df["revenue"], color='skyblue')
             plt.title("Top 10 Highest Revenue Generating Products")
-            plt.xlabel("Product ID")
+            plt.xlabel("Product_ID")
             plt.ylabel("Revenue")
             plt.xticks(rotation=45)
             st.pyplot(plt)
