@@ -11,7 +11,8 @@ def get_db_connection():
         port=5432,
         database="postgres",
         user="postgres",
-        password="tharshan")
+        password="tharshan"
+    )
     return conn
 
 def run_query(query):
