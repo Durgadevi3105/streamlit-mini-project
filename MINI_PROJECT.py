@@ -3,8 +3,6 @@ import pandas as pd
 import psycopg2
 
 
-
-
 def get_db_connection():
     conn = psycopg2.connect(
         host="dbdurga.c7igy8goq28e.ap-south-1.rds.amazonaws.com",
