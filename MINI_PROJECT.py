@@ -9,7 +9,7 @@ def get_db_connection():
         port=5431,
         database="postgres",
         user="postgres",
-        password="tharshan"
+        password="tharshan2020"
     )
     return conn
 
