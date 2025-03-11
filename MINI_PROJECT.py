@@ -5,7 +5,7 @@ import psycopg2
 
 def get_db_connection():
     conn = psycopg2.connect(
-        host="dbdurga.cjm6cqs6m2b3.ap-south-1.rds.amazonaws.com",
+        host="dbdurga.crumicwkuosy.us-east-1.rds.amazonaws.com",
         port=5432,
         database="postgres",
         user="postgres",
